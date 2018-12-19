@@ -21,11 +21,19 @@ sourceCompatibility = 11
 
 repositories {
 	mavenCentral()
+	maven { url "http://repo.spring.io/libs-release" }
+	maven { url "http://repo.spring.io/libs-milestone" }
+	maven { url "http://repo.spring.io/libs-snapshot" }
+	maven { url "http://repo.spring.io/milestone" }
+	maven { url "https://repo.spring.io/snapshot" }
 }
 
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-webflux')
+	implementation('org.springframework.data:spring-data-r2dbc:1.0.0.BUILD-SNAPSHOT')
+	implementation('io.r2dbc:r2dbc-postgresql:1.0.0.M5')
 	implementation('org.flywaydb:flyway-core')
+
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compileOnly('org.projectlombok:lombok')
 

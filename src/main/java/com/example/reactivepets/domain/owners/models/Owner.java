@@ -1,4 +1,4 @@
-package com.example.reactivepets.domain.owner.models;
+package com.example.reactivepets.domain.owners.models;
 
 import lombok.Getter;
 import lombok.Setter;
