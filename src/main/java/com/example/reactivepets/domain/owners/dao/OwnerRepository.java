@@ -13,6 +13,10 @@ public class OwnerRepository {
     private final DatabaseClient databaseClient;
 
     public Flux<Owner> findAll() {
-        return databaseClient.select().from("owners").as(Owner.class).fetch().all();
+        return databaseClient.select()
+            .from("owners")
+            .as(Owner.class)
+            .fetch()
+            .all();
     }
 }
